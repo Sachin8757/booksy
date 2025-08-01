@@ -1,0 +1,87 @@
+<%- include('./layout/plate.ejs') %>
+
+
+    <body>
+        <div class="main">
+            <!-- Burger Menu -->
+            <div class="burger" id="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
+            <!-- Navigation Menu -->
+            <div class="nav" id="nav">
+                <nav class="navbar">
+                    <div class="logo">Booksy</div>
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li><a href="/addbook"><i class="fa-solid fa-book"></i> AddBooks</a></li>
+                        <li><a href="/about"><i class="fa-solid fa-address-card"></i> About</a></li>
+                        <li><a href="/contact"><i class="fa-solid fa-phone"></i> Contact</a></li>
+                        <li>
+                            <% if (islog) { %>
+                                <a href="/logout" class="anchertag"><i
+                                        class="fa-solid fa-user"></i>&nbsp;&nbsp;logout</a>
+                                <% } else { %>
+                                    <a href="/login" class="anchertag"><i
+                                            class="fa-solid fa-user"></i>&nbsp;&nbsp;Login</a>
+                                    <% } %>
+                        </li>
+                        <li><a href="/cart" class="anchertag"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Body Content -->
+            <div class="body">
+                <div class="head">
+                    <div class="head2">
+                        <div class="hed">
+                            <h3 class="heading">Booksy</h3>
+                        </div>
+                        <div class="loging">
+                            <% if (islog) { %>
+                                <a href="/logout" class="anchertag"><i
+                                        class="fa-solid fa-user"></i>&nbsp;&nbsp;logout</a>
+                                <% } else { %>
+                                    <a href="/login" class="anchertag"><i
+                                            class="fa-solid fa-user"></i>&nbsp;&nbsp;Login</a>
+                                    <% } %>
+
+                                <a href="/cart" class="anchertag"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="box">
+                    <!-- all data print here and write here -->
+                    <% if (books && books.length> 0) { %>
+                        <ul>
+                            <% books.forEach(function(book) { %>
+                                <li>
+                                    <strong>
+                                        <%= book.title %>
+                                    </strong>
+                                    <a href="/detailsbook/<%=book._id%>"><button>click</button></a>
+                                </li>
+                                <% }); %>
+                        </ul>
+                        <% } else { %>
+                            <p>No books found.</p>
+                            <% } %>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const burger = document.getElementById('burger');
+            const nav = document.getElementById('nav');
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('show-nav');
+            });
+        </script>
+    </body>
+
+    </html>

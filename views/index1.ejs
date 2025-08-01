@@ -1,0 +1,19 @@
+<%- include('./layout/plate.ejs') %>
+<body>
+    <div class="main">
+        <div class="box">
+            
+        <% if (books && books.length > 0) { %>
+            <ul>
+                <% books.forEach(function(book) { %>
+                    <li>
+                        <strong><%= book.title %></strong>
+                        <a href="/detailsbook/<%=book._id%>"><button>click</button></a>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p>No books found.</p>
+        <% } %>
+    </div>
+</body>

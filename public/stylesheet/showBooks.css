@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f7f7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.book-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.book-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.no-img {
+  width: 100%;
+  height: 180px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.book-card h2 {
+  margin-top: 10px;
+  color: #1a1a1a;
+}
+
+.book-card p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 15px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .book-card h2 {
+    font-size: 18px;
+  }
+
+  .book-card p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+.book-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+}

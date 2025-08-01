@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* Navigation Bar */
+.nav {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    background-color: transparent;
+    background-color: #c8bdbd;
+    box-shadow: 0px 0px 10px rgb(187, 183, 183);
+}
+
+/* Burger Menu Hidden on Large Screens */
+.burger {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+/* Burger Lines */
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+.line:hover {
+    background-color: rgb(64, 162, 148);
+}
+
+.head {
+    display: none;
+}
+
+.heading {
+    display: none;
+}
+
+.head2 {
+    display: none;
+}
+
+.hed {
+    display: none;
+}
+
+.loging {
+    display: none;
+}
+
+.anchertag {
+    display: none;
+}
+
+/* Body Content */
+.body {
+    padding: 20px;
+    width: 100%;
+    height: calc(100vh - 60px);
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    display: absolute;
+    position: relative;
+    top: 30px;
+}
+
+.anchertag:hover {
+    transition: color 0.3s;
+    color: #007bff;
+}
+
+
+/* Navigation hidden on small screens */
+@media (max-width: 420px) {
+    .nav {
+        width: 50%;
+        height: 100vh;
+        position: absolute;
+        left: -100%;
+        top: 0;
+        transition: left 0.3s ease;
+        z-index: 15;
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+    }
+
+    .nav.show-nav {
+        left: 0;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+
+
+    .head {
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 70px;
+        width: 100%;
+        height: 50px;
+        flex-direction: column;
+    }
+
+    .head2 {
+        display: flex;
+    }
+
+    .hed {
+        display: block;
+        width: 25%;
+    }
+
+    .heading {
+        display: block;
+        color: black;
+        position: relative;
+        top: 10px;
+        left: 10px;
+        font-size: 22px;
+    }
+
+    .loging {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 100px;
+        color: black;
+    }
+
+    .anchertag {
+        display: inline-block;
+        font-size: 18px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+        color: black;
+        margin-right: 15px;
+    }
+}
