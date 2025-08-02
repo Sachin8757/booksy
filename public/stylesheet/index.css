@@ -94,6 +94,11 @@ html {
     transition: color 0.3s;
     color: #007bff;
 }
+/* start book css */
+.img{
+    width: 250px;
+    height: 250px;
+}
 
 
 /* Navigation hidden on small screens */
@@ -164,5 +169,8 @@ html {
         text-decoration: none;
         color: black;
         margin-right: 15px;
+    }
+    .box{
+        top:70px;
     }
 }

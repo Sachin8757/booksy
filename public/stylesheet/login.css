@@ -1,0 +1,113 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #fdfbfb, #ebedee);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      height: 1000px;
+}
+
+/* Main Container */
+.main {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+  
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Login Box */
+.login {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.hedar {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Labels */
+label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Inputs */
+.input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    transition: border 0.3s;
+}
+
+.input:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+/* Button */
+button[type="submit"] {
+    padding: 12px;
+    width: 100%;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #357abd;
+}
+
+/* Signup Link */
+.signup-link {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+    .main {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .hedar {
+        font-size: 24px;
+    }
+
+    .input,
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}

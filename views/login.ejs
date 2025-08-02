@@ -1,86 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-    <style>
-        body {
-            background: #f5f6fa;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .login-container {
-            background: #fff;
-            padding: 2rem 2.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-            width: 350px;
-        }
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 1.5rem;
-            color: #333;
-        }
-        .login-container label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #555;
-            font-size: 1rem;
-        }
-        .login-container input[type="text"],
-        .login-container input[type="password"] {
-            width: 100%;
-            padding: 0.7rem;
-            margin-bottom: 1.2rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 1rem;
-            box-sizing: border-box;
-        }
-        .login-container button {
-            width: 100%;
-            padding: 0.8rem;
-            background: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        .login-container button:hover {
-            background: #0056b3;
-        }
-        .login-container .signup-link {
-            display: block;
-            text-align: center;
-            margin-top: 1rem;
-            color: #007bff;
-            text-decoration: none;
-            font-size: 0.95rem;
-        }
-        .login-container .signup-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="/stylesheet/login.css">
+    <title>Booksy</title>
+
 </head>
+
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="/login" method="POST" >
-            <label for="phone">Phone Number</label>
-            <input type="text" id="Email" name="phoneNumber" required>
+    <div class="main">
+        <div class="login">
+            <h2 class="hedar">Login</h2>
+            <form action="/login" method="POST">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="Email" name="phoneNumber" class="input" required>
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="input" required>
 
-            <button type="submit">Login</button>
-        </form>
-        <a class="signup-link" href="/register">Don't have an account? Sign up</a>
+                <button type="submit">Login</button>
+            </form>
+            <a class="signup-link" href="/register">Don't have an account? Sign up</a>
+        </div>
     </div>
 </body>
+
 </html>

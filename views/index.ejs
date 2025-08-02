@@ -57,16 +57,16 @@
                 <div class="box">
                     <!-- all data print here and write here -->
                     <% if (books && books.length> 0) { %>
-                        <ul>
+                        
                             <% books.forEach(function(book) { %>
-                                <li>
-                                    <strong>
-                                        <%= book.title %>
-                                    </strong>
-                                    <a href="/detailsbook/<%=book._id%>"><button>click</button></a>
-                                </li>
+                            <a href="/detailsbook/<%=book._id%>">
+                                <button>
+                                    <img src="<%=book.image%>" alt="" class="img">
+                                </button>
+                            </a>
+                                 
                                 <% }); %>
-                        </ul>
+                        
                         <% } else { %>
                             <p>No books found.</p>
                             <% } %>
