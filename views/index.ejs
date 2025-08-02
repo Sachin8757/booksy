@@ -49,7 +49,7 @@
                                             class="fa-solid fa-user"></i>&nbsp;&nbsp;Login</a>
                                     <% } %>
 
-                                <a href="/cart" class="anchertag"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="/cart" class="anchertag"><i class="fa-solid fa-cart-shopping"></i></a>
                         </div>
                     </div>
 
@@ -57,19 +57,21 @@
                 <div class="box">
                     <!-- all data print here and write here -->
                     <% if (books && books.length> 0) { %>
-                        
-                            <% books.forEach(function(book) { %>
+                        <% books.forEach(function(book) { %>
                             <a href="/detailsbook/<%=book._id%>">
-                                <button class="book">
-                                    <img src="<%=book.image%>" alt="" class="img">
+                                <button class="btn">
+                                    <div class="card">
+                                        <img src="<%=book.image%>" alt="" class="img">
+                                    </div>
+
                                 </button>
                             </a>
-                                 
-                                <% }); %>
-                        
-                        <% } else { %>
-                            <p>No books found.</p>
-                            <% } %>
+
+                            <% }); %>
+
+                                <% } else { %>
+                                    <p>No books found.</p>
+                                    <% } %>
                 </div>
             </div>
         </div>
