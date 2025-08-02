@@ -55,35 +55,32 @@
 
                 </div>
                 <div class="box">
-                    <!-- all data print here and write here -->
                     <% if (books && books.length> 0) { %>
                         <% books.forEach(function(book) { %>
-                            <a href="/detailsbook/<%=book._id%>">
-                                <button class="btn">
-                                    <div class="card">
-                                        <img src="<%=book.image%>" alt="" class="img">
-                                    </div>
-
-                                </button>
-                            </a>
-
+                            <div class="card">
+                                <a href="/detailsbook/<%=book._id%>">
+                                    <button class="btn">
+                                        <div class="card">
+                                            <img src="<%=book.image%>" alt="" class="img">
+                                        </div>
+                                    </button>
+                                </a>
+                            </div>
                             <% }); %>
-
-                                <% } else { %>
-                                    <p>No books found.</p>
-                                    <% } %>
+                            <% } else { %>
+                            <p>No books found.</p>
+                    <% } %>
                 </div>
             </div>
-        </div>
 
-        <script>
-            const burger = document.getElementById('burger');
-            const nav = document.getElementById('nav');
+            <script>
+                const burger = document.getElementById('burger');
+                const nav = document.getElementById('nav');
 
-            burger.addEventListener('click', () => {
-                nav.classList.toggle('show-nav');
-            });
-        </script>
+                burger.addEventListener('click', () => {
+                    nav.classList.toggle('show-nav');
+                });
+            </script>
     </body>
 
     </html>
