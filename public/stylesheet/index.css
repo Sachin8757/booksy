@@ -115,19 +115,22 @@ html {
 
 .card {
     height: 215px;
-    width: 145px;
+    width: 160px;
     box-sizing: border-box;
     border-radius: 8px;
-    /* flex: 0 1 calc(33.333% - 1rem); */
     background-color: transparent;
-    /* box-shadow: 0px 0px 10px rgb(19, 123, 151); */
     color: wheat;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    ;
+}
 
+/* Show two cards per row on screens less than 420px */
+@media (max-width: 420px) {
+    .card {
+        width: calc(50% - 1rem);
+        margin-bottom: 1rem;
+    }
 }
 
 .card:hover {
@@ -138,8 +141,8 @@ html {
 .price {
     position: relative;
     font-weight: bold;
-    bottom: 40px;
-    left: 10px;
+    bottom: 50px;
+    /* left: 10px; */
     margin-right: 4px;
     background-color: #7cc1dc;
     padding: 4px 8px;
