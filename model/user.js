@@ -12,13 +12,17 @@ const userSchema = new mongoose.Schema({
         trim: true,
         unique: true // Make phoneNumber unique (acts as primary key)
     },
+    gmail: {
+        type: String,
+        required: true,
+    },
     password: {
         type: String,
         required: true
     },
     order: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'book'
+        ref: 'Book'
     }],
     book: [{
         type: mongoose.Schema.Types.ObjectId,

@@ -1,5 +1,7 @@
 <%- include('./layout/plate.ejs') %>
-<link rel="stylesheet" href="/stylesheet/index.css">
+
+    <link rel="stylesheet" href="/stylesheet/myorder.css">
+
     <body>
         <div class="main">
             <!-- Burger Menu -->
@@ -31,7 +33,7 @@
                                             class="fa-solid fa-user"></i>&nbsp;&nbsp;Login</a>
                                     <% } %>
                         </li>
-                        <li><a href="/myorder" class="anchertag"><i class="fa-solid fa-cart-shopping"></i> My Orders</a></li>
+                        <li><a href="/myorder" class="anchertag"><i class="fa-solid fa-cart-shopping"></i></a></li>
                     </ul>
                 </nav>
             </div>
@@ -62,19 +64,13 @@
                 <div class="box">
                     <% if (books && books.length> 0) { %>
                         <% books.forEach(function(book) { %>
-                            <div class="card">
-                                <a href="/detailsbook/<%=book._id%>">
-                                    <button class="btn">
-                                        <div class="card">
-                                            <img src="<%=book.image%>" alt="" class="img">
-                                        </div>
-                                        <div class="price">
-                                            <p>₹<%=book.price%>
-                                            </p>
-                                        </div>
-                                    </button>
-                                </a>
-                            </div>
+                            <a href="/detailsbook/<%=book._id%>">
+                                <div class="card">
+                                    <img src="<%=book.image%>" class="img" alt="Book Image">
+                                    <h3><%=book.title%></h3>
+                                    <p class="price"><%=book.price%></p>
+                                </div>
+                            </a>
                             <% }); %>
                                 <% } else { %>
                                     <p>No books found.</p>

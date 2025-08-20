@@ -6,6 +6,10 @@ const bookSchema = new mongoose.Schema({
         ref: 'User',
         required: true
     },
+    order:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }],
     title: { type: String, required: true },
     image: { type: String },
     price: { type: String },
