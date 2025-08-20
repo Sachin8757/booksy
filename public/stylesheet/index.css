@@ -124,6 +124,18 @@ html {
     display: flex;
     flex-direction: column;
 }
+.btn{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 /* Show two cards per row on screens less than 420px */
 @media (max-width: 420px) {
@@ -137,7 +149,10 @@ html {
     transform: scale(1.01);
     transition-duration: 500ms;
 }
-
+.img{
+    width: 100%;
+    height: 100%;
+}
 .price {
     position: relative;
     font-weight: bold;
