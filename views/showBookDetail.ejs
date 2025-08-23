@@ -46,7 +46,6 @@
                   <% } %>
 
                     <a href="/myorder" class="anchertag"><i class="fa-solid fa-cart-shopping"></i></a>
-                    <!-- <a href="/" class="anchertag"><i class="fa-solid fa-cart-shopping"></i></a> -->
             </div>
           </div>
 
@@ -75,12 +74,11 @@
                       <p><strong>Call for Order:</strong>
                         <%= book.owner.phoneNumber%>
                       </p>
-                      <a href="/orderbook/<%=book._id%>"><button class="btn">Order</button></a>
-                      <!-- <button class="btn">Order</button> -->
+                      <a href="/orderbook/<%=book._id%>"><button class="btnn">Order</button></a>
                       <%if(userId){%>
                         <%if(userId==book.owner._id){%>
-                          <a href=""><button class="btn">Edit</button></a>
-                          <a href="/deletebook/<%=book._id%>"><button class="btn btndark">Delete</button></a>
+                          <a href=""><button class="btnn">Edit</button></a>
+                          <a href="/deletebook/<%=book._id%>"><button class="btnn btndark">Delete</button></a>
                           <%}%>
                             <%}%>
               </div>

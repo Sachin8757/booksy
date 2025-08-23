@@ -156,8 +156,8 @@ html {
 .price {
     position: relative;
     font-weight: bold;
-    bottom: 50px;
-    /* left: 10px; */
+    bottom: 70px;
+    left: 10px;
     margin-right: 4px;
     background-color: #7cc1dc;
     padding: 4px 8px;
